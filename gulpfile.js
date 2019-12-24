@@ -7,7 +7,7 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 
 const files = {
-    scssPath: 'src/scss/*.scss',
+    scssPath: 'src/custom/scss/*.scss',
 
     cssDependenciesPath: ['node_modules/bootstrap/dist/css/bootstrap.min.css'],
     jsDependenciesPath: ['node_modules/jquery/dist/jquery.min.js', 'node_modules/popper.js/dist/popper.min.js',
