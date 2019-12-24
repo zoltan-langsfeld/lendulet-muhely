@@ -1,0 +1,5 @@
+.gulp-scss-cache
+.idea
+node_modules
+src/css
+src/js
