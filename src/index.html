@@ -32,8 +32,8 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#">Carousel</a>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top header-custom">
+        <a class="navbar-brand" href="#">Lendület Műhely</a>
         <button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"
                 class="navbar-toggler" data-target="#navbarCollapse" data-toggle="collapse" type="button">
             <span class="navbar-toggler-icon"></span>
@@ -41,13 +41,19 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Munkatársaink<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Szolgáltatások<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a aria-disabled="true" class="nav-link disabled" href="#" tabindex="-1">Disabled</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Áraink<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Galéria<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Kapcsolat<span class="sr-only">(current)</span></a>
                 </li>
             </ul>
         </div>
@@ -60,48 +66,31 @@
         <ol class="carousel-indicators">
             <li class="active" data-slide-to="0" data-target="#myCarousel"></li>
             <li data-slide-to="1" data-target="#myCarousel"></li>
-            <li data-slide-to="2" data-target="#myCarousel"></li>
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <svg class="bd-placeholder-img" focusable="false" height="100%" preserveAspectRatio="xMidYMid slice"
-                     role="img" width="100%" xmlns="http://www.w3.org/2000/svg">
-                    <rect fill="#777" height="100%" width="100%"/>
-                </svg>
-                <div class="container">
-                    <div class="carousel-caption text-left">
-                        <h1>Example headline.</h1>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
-                            gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <svg class="bd-placeholder-img" focusable="false" height="100%" preserveAspectRatio="xMidYMid slice"
-                     role="img" width="100%" xmlns="http://www.w3.org/2000/svg">
-                    <rect fill="#777" height="100%" width="100%"/>
-                </svg>
+                <img alt="couple" src="assets/couple_3.jpg"/>
                 <div class="container">
                     <div class="carousel-caption">
-                        <h1>Another example headline.</h1>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
-                            gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                        <h1>Felnőtt- és párterápia</h1>
+                        <p>Az egyéni pszichológiai üléseken látszólag két ember beszélgetése zajlik, ám ez nem a
+                            szokványos módon történik. A kezelő a páciens megnyilvánulásainak érzékelőjévé,
+                            elfogadójává,
+                            tükrévé válhat.
+                        </p>
+                        <p><a class="btn-custom btn btn-lg" href="#" role="button">Bővebben</a></p>
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
-                <svg class="bd-placeholder-img" focusable="false" height="100%" preserveAspectRatio="xMidYMid slice"
-                     role="img" width="100%" xmlns="http://www.w3.org/2000/svg">
-                    <rect fill="#777" height="100%" width="100%"/>
-                </svg>
+                <img alt="children" src="assets/children.jpg"/>
                 <div class="container">
-                    <div class="carousel-caption text-right">
-                        <h1>One more for good measure.</h1>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
-                            gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                    <div class="carousel-caption">
+                        <h1>Gyermek- és családterápia</h1>
+                        <p>A gyermekkor az élet rengeteg változást és alkalmazkodást kívánó időszaka, mely sok
+                            lehetőséget
+                            ad a pszichés problémák kialakulására, tünetek megjelenésére.</p>
+                        <p><a class="btn-custom btn btn-lg" href="#" role="button">Bővebben</a></p>
                     </div>
                 </div>
             </div>

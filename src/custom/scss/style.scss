@@ -1,3 +1,13 @@
+/* COLORS
+-------------------------------------------------- */
+
+$color-a: #331E38;
+$color-b: #706993;
+$color-c: #70A0AF;
+$color-d: #A0C1B9;
+$color-e: #F4E8C1;
+
+
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
@@ -6,6 +16,22 @@ body {
   padding-top: 3rem;
   padding-bottom: 3rem;
   color: #5a5a5a;
+}
+
+/* CUSTOMIZE THE HEADER
+-------------------------------------------------- */
+
+.header-custom {
+  background-color: $color-a;
+}
+
+/* CUSTOMIZE THE BUTTON
+-------------------------------------------------- */
+
+.btn-custom {
+  color: #fff !important;
+  background-color: $color-b !important;
+  border-color: $color-b !important;
 }
 
 
@@ -30,10 +56,10 @@ body {
 
 .carousel-item > img {
   position: absolute;
-  top: 0;
+  top: -35rem;
   left: 0;
-  min-width: 100%;
-  height: 32rem;
+  width: 100rem;
+  height: 70rem;
 }
 
 
