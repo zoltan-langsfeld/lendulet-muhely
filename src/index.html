@@ -3,68 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-    <meta content="" name="description">
-    <meta content="Mark Otto, Jacob Thornton, and Bootstrap contributors" name="author">
-    <meta content="Jekyll v3.8.6" name="generator">
-    <title>Carousel Template · Bootstrap</title>
-
-    <link href="https://getbootstrap.com/docs/4.4/examples/carousel/" rel="canonical">
-
     <link href="./css/style.css" rel="stylesheet">
     <link href="./css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-    </style>
 </head>
 <body>
-<header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top header-custom">
-        <a class="navbar-brand" href="#">
-            <img alt="logo" src="assets/lendulet_logo.svg" width="40"/>
-            Lendület Műhely
-        </a>
-        <button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"
-                class="navbar-toggler" data-target="#navbarCollapse" data-toggle="collapse" type="button">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Munkatársaink<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Szolgáltatások<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Áraink<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Galéria<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Kapcsolat<span class="sr-only">(current)</span></a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</header>
+<div id="navbar"></div>
 
 <main role="main">
-
     <div class="carousel slide" data-ride="carousel" id="myCarousel">
         <ol class="carousel-indicators">
             <li class="active" data-slide-to="0" data-target="#myCarousel"></li>
@@ -108,14 +53,8 @@
         </a>
     </div>
 
-
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
     <div class="container" id="colleagues-overview">
         <p class="h1 text-center">Munkatársaink</p>
-        <!-- Three columns of text below the carousel -->
         <div class="row">
             <div class="col-lg-4">
                 <img alt="Arany Ildiko" class="rounded-circle" height="140" src="assets/arany_ildiko.jpg">
@@ -146,17 +85,21 @@
                 <p><a class="btn btn-secondary btn-custom" href="#" role="button">Részletek &raquo;</a></p>
             </div>
         </div>
-        <hr class="featurette-divider">
     </div>
 
-    <!-- FOOTER -->
-    <footer class="container">
-        <p>&copy; 2020 Lendület Műhely &middot; <a href="#">Adatkezelés</a></p>
-    </footer>
+    <div id="footer"></div>
 </main>
 
 <script src="./js/jquery.min.js"></script>
 <script src="./js/popper.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#navbar').load('navbar.html');
+    });
+    $(document).ready(function () {
+        $('#footer').load('footer.html');
+    });
+</script>
 </body>
 </html>
