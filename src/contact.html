@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="hu">
+<head title="Lendület műhely">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#navbar').load('navbar.html');
+        });
+        $(document).ready(function () {
+            $('#footer').load('footer.html');
+        });
+    </script>
+</head>
+<body>
+<div id="navbar"></div>
+<main>
+    <div class="container">
+        <h2>Elérhetőség</h2>
+        <p>
+            Foglalkozásainkon való részvételhez bejelentkezés szükséges e-mailben vagy telefonon.
+            Egyes munkatársaink elérhetőségét <a href="#">itt</a> találja.
+        </p>
+        <h2>Címünk</h2>
+        <p>
+            1138 Budapest, Esztergomi u.52/a
+        </p>
+        <div class="z-depth-1-half map-container">
+            <iframe allowfullscreen
+                    frameborder="0"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2693.7889371601946!2d19.06094415104747!3d47.53297200095253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dbe8d3ef2d77%3A0x6d796abb18b362b0!2sBudapest%2C%20Esztergomi%20%C3%BAt%2052a%2C%201138!5e0!3m2!1shu!2shu!4v1577795071804!5m2!1shu!2shu"
+                    style="border:0">
+            </iframe>
+        </div>
+        <div id="footer"></div>
+    </div>
+</main>
+</body>
+</html>
