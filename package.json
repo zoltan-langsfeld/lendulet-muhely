@@ -2,6 +2,7 @@
   "name": "lendulet_muhely",
   "version": "1.0.0",
   "description": "A website for Lendulet Muhely",
+  "repository": "https://github.com/lajtavariz/lendulet-muhely",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,8 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^4.4.1",
-    "gulp-minify": "^3.1.0",
-    "gulp-rename": "^2.0.0",
     "jquery": "^3.4.1",
     "popper.js": "^1.16.0"
   },
@@ -20,7 +19,9 @@
     "browser-sync": "^2.26.7",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
+    "gulp-minify": "^3.1.0",
     "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5"
   }
