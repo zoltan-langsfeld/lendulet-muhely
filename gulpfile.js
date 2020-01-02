@@ -1,6 +1,5 @@
 const {src, dest, watch, series, parallel} = require('gulp');
 const sourcemaps = require('gulp-sourcemaps');
-const browserSync = require('browser-sync').create();
 const postcss = require('gulp-postcss');
 const sass = require('gulp-sass');
 const autoprefixer = require('autoprefixer');
@@ -9,8 +8,8 @@ const minify = require("gulp-minify");
 const rename = require("gulp-rename");
 
 const files = {
-    scssPath: 'src/custom/scss/*.scss',
-    customJsPath: 'src/custom/js/*.js',
+    scssPath: 'src/scss/*.scss',
+    customJsPath: 'src/js_custom/*.js',
 
     cssDependenciesPath: ['node_modules/bootstrap/dist/css/bootstrap.min.css'],
     jsDependenciesPath: ['node_modules/jquery/dist/jquery.min.js', 'node_modules/popper.js/dist/popper.min.js',
@@ -27,23 +26,23 @@ function compileCustomSCSS() {
         .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(sourcemaps.write('.'))
         .pipe(rename('style.min.css'))
-        .pipe(dest('src/css'))
+        .pipe(dest(files.cssPath))
 }
 
 function minifyCustomJS() {
     return src(files.customJsPath)
         .pipe(minify({noSource: true}))
-        .pipe(dest('src/js'))
+        .pipe(dest(files.jsPath))
 }
 
 function importExternalCssDependencies() {
     return src(files.cssDependenciesPath)
-        .pipe(dest('src/css'))
+        .pipe(dest(files.cssPath))
 }
 
 function importExternalJsDependencies() {
     return src(files.jsDependenciesPath)
-        .pipe(dest('src/js'))
+        .pipe(dest(files.jsPath))
 }
 
 function watchTask() {
