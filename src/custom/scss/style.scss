@@ -6,6 +6,7 @@ $color-b: #706993;
 $color-c: #70A0AF;
 $color-d: #A0C1B9;
 $color-e: #F4E8C1;
+$color-body: #5a5a5a;
 
 
 /* GLOBAL STYLES
@@ -13,34 +14,58 @@ $color-e: #F4E8C1;
 /* Padding below the footer and lighter body text */
 
 body {
-  padding-top: 6rem;
+  padding-top: 5.2rem;
   padding-bottom: 3rem;
-  color: #5a5a5a;
+  color: $color-body;
+}
+
+#root h1 {
+  margin-bottom: 1rem;
+}
+
+.divider {
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* CUSTOMIZE THE MAIN PAGE
+-------------------------------------------------- */
+#main-page {
+  padding-top: 4rem;
+}
+
+/* CUSTOMIZE THE GALLERY PAGE
+-------------------------------------------------- */
+#gallery-page {
+  padding-top: 5rem;
 }
 
 /* CUSTOMIZE THE HEADER
 -------------------------------------------------- */
 
-.header-custom {
+#root .navbar {
   background-color: $color-a;
+}
+
+#root .dropdown-toggle {
+  color: white;
 }
 
 /* CUSTOMIZE THE BUTTON
 -------------------------------------------------- */
 
-.btn-custom {
-  color: #fff !important;
-  background-color: $color-b !important;
-  border-color: $color-b !important;
+#root .btn {
+  color: white;
+  background-color: $color-b;
+  border-color: $color-b;
 }
-
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
 /* Carousel base class */
 .carousel {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 /* Since positioning the image, we need to help out the caption */
@@ -56,10 +81,9 @@ body {
 
 .carousel-item > img {
   position: absolute;
-  top: -35rem;
+  top: -33rem;
   left: 0;
-  width: 100rem;
-  height: 70rem;
+  height: 67rem;
 }
 
 
@@ -71,13 +95,21 @@ body {
   margin-left: 5rem;
 }
 
+#colleagues-overview img.rounded-circle {
+  margin-bottom: 0.4rem;
+}
 
 #colleagues-overview .col-lg-4 {
   margin-bottom: 1.5rem;
   text-align: center;
 }
 
+#colleagues-overview .h1 {
+  margin-bottom: .7rem;
+}
+
 #colleagues-overview h2 {
+  margin-bottom: 0;
   font-weight: 400;
 }
 
@@ -86,19 +118,11 @@ body {
   margin-left: .75rem;
 }
 
+/* COLLEAGUES DETAILS
+-------------------------------------------------- */
 
-/* Featurettes
-------------------------- */
-
-.featurette-divider {
-  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
-}
-
-/* Thin out the marketing headings */
-.featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -.05rem;
+#colleagues h2.name {
+  margin-bottom: 0;
 }
 
 /* GOGGLE MAPS
@@ -128,14 +152,22 @@ body {
     font-size: 1.25rem;
     line-height: 1.4;
   }
+}
 
-  .featurette-heading {
-    font-size: 50px;
+@media (min-width: 768px) {
+  #colleagues img {
+    margin-top: 0.5rem;
   }
 }
 
-@media (min-width: 62em) {
-  .featurette-heading {
-    margin-top: 7rem;
+@media (max-width: 768px) {
+  #colleagues img {
+    margin-top: 0;
+  }
+  #colleagues h2.name {
+    margin-top: .5rem;
+  }
+  body {
+    padding-top: 4.8rem;
   }
 }
