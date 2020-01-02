@@ -7,7 +7,7 @@ const ARANY_ILDIKO = {
 
 const BOGAR_JUDIT = {
     name: 'Bogár Judit',
-    title: 'klinikai szakpszichológus',
+    title: 'klinikai gyermek- és ifjúsági szakpszichológus',
     phoneNr: '+36 30 273 7739',
     email: 'judibogar@gmail.com'
 };
