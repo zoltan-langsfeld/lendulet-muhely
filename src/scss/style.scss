@@ -14,7 +14,7 @@ $color-body: #5a5a5a;
 /* Padding below the footer and lighter body text */
 
 body {
-  padding-top: 5.2rem;
+  padding-top: 5rem;
   padding-bottom: 3rem;
   color: $color-body;
 }
@@ -97,6 +97,7 @@ body {
 
 #colleagues-overview img.rounded-circle {
   margin-bottom: 0.4rem;
+  width: 8rem;
 }
 
 #colleagues-overview .col-lg-4 {
@@ -105,7 +106,7 @@ body {
 }
 
 #colleagues-overview .h1 {
-  margin-bottom: .7rem;
+  margin-bottom: 1rem;
 }
 
 #colleagues-overview h2 {
@@ -123,6 +124,10 @@ body {
 
 #colleagues h2.name {
   margin-bottom: 0;
+}
+
+#colleagues img {
+  width: 11rem;
 }
 
 /* GOGGLE MAPS
