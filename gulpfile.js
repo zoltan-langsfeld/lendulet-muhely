@@ -15,9 +15,27 @@ const files = {
     jsDependenciesPath: ['node_modules/jquery/dist/jquery.min.js', 'node_modules/popper.js/dist/popper.min.js',
         'node_modules/bootstrap/dist/js/bootstrap.min.js'],
 
-    cssPath: 'src/css',
-    jsPath: 'src/js'
+    workingCssPath: 'src/css',
+    workingJsPath: 'src/js',
+
+    targetPath: 'target',
+    targetCssPath: 'target/css',
+    targetJsPath: 'target/js',
+    targetAssetsPath: 'target/assets',
+
+    htmlSourcePath: 'src/*.html',
+    assetsSourcePath: 'src/assets/**'
 };
+
+// CSS tasks
+
+function compileCustomSCSSToWorkingDir() {
+    return compileCustomSCSS().pipe(dest(files.workingCssPath))
+}
+
+function compileCustomSCSSToTargetDir() {
+    return compileCustomSCSS().pipe(dest(files.targetCssPath))
+}
 
 function compileCustomSCSS() {
     return src(files.scssPath)
@@ -26,31 +44,79 @@ function compileCustomSCSS() {
         .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(sourcemaps.write('.'))
         .pipe(rename('style.min.css'))
-        .pipe(dest(files.cssPath))
+}
+
+function moveCssDependenciesToWorkingDir() {
+    return src(files.cssDependenciesPath)
+        .pipe(dest(files.workingCssPath))
+}
+
+function moveCssDependenciesToTargetDir() {
+    return src(files.cssDependenciesPath)
+        .pipe(dest(files.targetCssPath))
+}
+
+// JS tasks
+
+function minifyCustomJsToWorkingDir() {
+    return minifyCustomJS()
+        .pipe(dest(files.workingJsPath));
+}
+
+function minifyCustomJsToTargetDir() {
+    return minifyCustomJS()
+        .pipe(dest(files.targetJsPath));
 }
 
 function minifyCustomJS() {
     return src(files.customJsPath)
         .pipe(minify({noSource: true}))
-        .pipe(dest(files.jsPath))
+
 }
 
-function importExternalCssDependencies() {
-    return src(files.cssDependenciesPath)
-        .pipe(dest(files.cssPath))
-}
-
-function importExternalJsDependencies() {
+function moveJsDependenciesToWorkingDir() {
     return src(files.jsDependenciesPath)
-        .pipe(dest(files.jsPath))
+        .pipe(dest(files.workingJsPath))
 }
+
+function moveJsDependenciesToTargetDir() {
+    return src(files.jsDependenciesPath)
+        .pipe(dest(files.targetJsPath))
+}
+
+// HTML and assets tasks
+
+function moveHTMLFilesToTargetDir() {
+    return src(files.htmlSourcePath)
+        .pipe(dest(files.targetPath))
+}
+
+function moveAssetsToTargetDir() {
+    return src(files.assetsSourcePath)
+        .pipe(dest(files.targetAssetsPath))
+}
+
+// Watch task
 
 function watchTask() {
-    watch(files.scssPath, compileCustomSCSS);
+    watch(files.scssPath, compileCustomSCSSToWorkingDir());
     watch(files.customJsPath, minifyCustomJS);
 }
 
 exports.default = series(
-    parallel(importExternalCssDependencies, compileCustomSCSS, minifyCustomJS, importExternalJsDependencies),
-    watchTask
-);
+    parallel(
+        moveCssDependenciesToWorkingDir,
+        moveJsDependenciesToWorkingDir,
+        compileCustomSCSSToWorkingDir,
+        minifyCustomJsToWorkingDir,
+
+        moveCssDependenciesToTargetDir,
+        moveJsDependenciesToTargetDir,
+        compileCustomSCSSToTargetDir,
+        minifyCustomJsToTargetDir,
+
+        moveHTMLFilesToTargetDir,
+        moveAssetsToTargetDir,
+
+        watchTask
+    ));
