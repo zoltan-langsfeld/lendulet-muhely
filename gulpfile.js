@@ -99,7 +99,7 @@ function moveAssetsToTargetDir() {
 // Watch task
 
 function watchTask() {
-    watch(files.scssPath, compileCustomSCSSToWorkingDir());
+    watch(files.scssPath, compileCustomSCSSToWorkingDir);
     watch(files.customJsPath, minifyCustomJS);
 }
 
