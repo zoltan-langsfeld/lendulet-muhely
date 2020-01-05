@@ -3,5 +3,4 @@
 node_modules
 src/css
 src/js
-src/assets
 target/**
