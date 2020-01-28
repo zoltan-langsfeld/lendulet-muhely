@@ -25,6 +25,7 @@ const files = {
     targetAssetsPath: 'target/assets',
 
     htmlSourcePath: 'src/*.html',
+    faviconSourcePath: 'src/favicon.ico',
     assetsSourcePath: 'src/assets/**'
 };
 
@@ -92,6 +93,11 @@ function moveHTMLFilesToTargetDir() {
         .pipe(dest(files.targetPath))
 }
 
+function moveFaviconToTargetDir() {
+    return src(files.faviconSourcePath)
+        .pipe(dest(files.targetPath))
+}
+
 function moveAssetsToTargetDir() {
     return src(files.assetsSourcePath)
         .pipe(dest(files.targetAssetsPath))
@@ -121,6 +127,7 @@ if (argv.prod === undefined) {
     minifyCustomJsToTargetDir,
 
     moveHTMLFilesToTargetDir,
+    moveFaviconToTargetDir,
     moveAssetsToTargetDir
   )
 }
