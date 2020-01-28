@@ -163,6 +163,12 @@ body {
   #colleagues img {
     margin-top: 0.5rem;
   }
+  .carousel-item > img {
+    position: absolute;
+    top: -32rem;
+    left: -36rem;
+    height: 70rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -178,5 +184,32 @@ body {
 
   body {
     padding-top: 4.7rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel-item > img {
+    position: absolute;
+    top: -32rem;
+    left: -28rem;
+    height: 70rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .carousel-item > img {
+    position: absolute;
+    top: -48rem;
+    left: -40rem;
+    height: 100rem;
+  }
+}
+
+@media (min-width: 1441px) {
+  .carousel-item > img {
+    position: absolute;
+    top: -59rem;
+    left: -24rem;
+    height: 120rem;
   }
 }
