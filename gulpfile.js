@@ -6,6 +6,7 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const minify = require("gulp-minify");
 const rename = require("gulp-rename");
+const argv = require('yargs').argv;
 
 const files = {
     scssPath: 'src/scss/*.scss',
@@ -103,20 +104,23 @@ function watchTask() {
     watch(files.customJsPath, minifyCustomJS);
 }
 
-exports.default = series(
-    parallel(
-        moveCssDependenciesToWorkingDir,
-        moveJsDependenciesToWorkingDir,
-        compileCustomSCSSToWorkingDir,
-        minifyCustomJsToWorkingDir,
+if (argv.prod === undefined) {
+  exports.default = parallel(
+    moveCssDependenciesToWorkingDir,
+    moveJsDependenciesToWorkingDir,
+    compileCustomSCSSToWorkingDir,
+    minifyCustomJsToWorkingDir,
 
-        moveCssDependenciesToTargetDir,
-        moveJsDependenciesToTargetDir,
-        compileCustomSCSSToTargetDir,
-        minifyCustomJsToTargetDir,
+    watchTask
+  )
+} else {
+  exports.default = parallel(
+    moveCssDependenciesToTargetDir,
+    moveJsDependenciesToTargetDir,
+    compileCustomSCSSToTargetDir,
+    minifyCustomJsToTargetDir,
 
-        moveHTMLFilesToTargetDir,
-        moveAssetsToTargetDir,
-
-        watchTask
-    ));
+    moveHTMLFilesToTargetDir,
+    moveAssetsToTargetDir
+  )
+}
