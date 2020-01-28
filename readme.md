@@ -7,13 +7,12 @@ This will download all the required dependencies:
 ```
 npm install
 ```
-This will move all the minified dependencies to the working and target
-directory, and it'll also minify and/or compile the custom scss/js files:
+This will move all the minified dependencies to the working directory, and it'll also minify and/or compile the custom scss/js files:
 ```
 gulp
-``` 
-You can directly host the the target directory on a server. Please note that
-if you want to re-export the project to the target directory, you have to re-run
-gulp, as the watch task only compiles the changed custom scss/js to the working 
-directory
-
+```
+The following script will compile, minify and move all files to the target directory, and
+it'll also upload them to AWS S3. You have to set up the AWS CLI credentials beforehand.
+```
+./deploy.sh
+```
