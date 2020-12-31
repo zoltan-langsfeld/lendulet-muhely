@@ -6,9 +6,9 @@ on: push
 jobs:
   # Set the job key. The key is displayed as the job name
   # when a job name is not provided
-  deploy: 
+  deploy:
     # Name the Job
-    name: Lint code base
+    name: Deploy to AWS
     # Set the type of machine to run on
     runs-on: ubuntu-latest
 
@@ -17,4 +17,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-central-1
