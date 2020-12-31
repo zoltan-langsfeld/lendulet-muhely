@@ -25,5 +25,5 @@ jobs:
           aws-region: eu-central-1
 
       - name: Deploy to AWS
-        run: ../../deploy-to-aws.sh
+        run: pwd
         shell: bash
