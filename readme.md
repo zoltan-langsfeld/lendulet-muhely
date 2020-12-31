@@ -12,7 +12,7 @@ The following command moves all the minified dependencies to the **working direc
 gulp
 ```
 To move all the minified dependencies to the **target directory**, and
-minify and/or compile the custom scss/js files:
+minify and/or compile the custom scss/js files, run:
 ```
 gulp --prod
 ```
