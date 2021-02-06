@@ -1,5 +1,5 @@
 # Lendulet muhely webpage
-This project is a bootstrap-based html site for the organization 'Lendulet muhely'.
+This project is a bootstrap-based html site for the organization Lendulet muhely.
 ## Prerequisites
 The latest LTS versions of Node, NPM and gulp-cli must be installed on your computer.
 ## Build
