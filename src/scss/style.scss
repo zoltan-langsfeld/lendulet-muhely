@@ -51,6 +51,15 @@ body {
   color: white;
 }
 
+#root .navbar .navbar-brand img {
+  margin-right: 0.2rem;
+}
+
+#root .navbar-dark .navbar-toggler {
+  border: none;
+  padding: 0.25rem;
+}
+
 /* CUSTOMIZE THE BUTTON
 -------------------------------------------------- */
 
@@ -162,10 +171,13 @@ body {
   #root h1 {
     margin-bottom: 0.3rem;
   }
-
   body {
     padding-top: 4.7rem;
   }
+  #root .navbar {
+    padding: .5rem .8rem;
+  }
+
 }
 
 /* MIN WIDTH */
