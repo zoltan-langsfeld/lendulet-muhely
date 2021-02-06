@@ -7,7 +7,7 @@ To install all the required dependencies, run:
 ```
 npm install
 ```
-The following command moves all the minified dependencies to the **working directory**, and also minifies and/or compiles the custom scss/js files:
+To move all the minified dependencies to the **working directory**, and to minify and/or compie the custom scss/js files, run:
 ```
 gulp
 ```
