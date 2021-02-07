@@ -24,12 +24,11 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img alt="image"
-                     src="assets/carousel/children_therapy_1920.jpg"
-                     srcset="
-                             assets/carousel/children_therapy_1920.jpg 1920w,
-                             assets/carousel/children_therapy_425.jpg 425w"
-                />
+                <picture>
+                    <source media="(max-width: 425px)" srcset="assets/carousel/children_therapy_425.jpg">
+                    <source media="(min-width: 425px)" srcset="assets/carousel/children_therapy_1920.jpg">
+                    <img src="assets/carousel/children_therapy_1920.jpg" alt="children therapy">
+                </picture>
                 <div class="container">
                     <div class="carousel-caption">
                         <h1>Gyermek- és családterápia</h1>
@@ -39,11 +38,11 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img alt="image"
-                     src="assets/carousel/couple_therapy_1920.jpg"
-                     srcset="assets/carousel/couple_therapy_1920.jpg 1920w,
-                     assets/carousel/couple_therapy_425.jpg 425w"
-                />
+                <picture>
+                    <source media="(max-width: 425px)" srcset="assets/carousel/couple_therapy_425.jpg">
+                    <source media="(min-width: 425px)" srcset="assets/carousel/couple_therapy_1920.jpg">
+                    <img src="assets/carousel/couple_therapy_1920.jpg" alt="couple therapy">
+                </picture>
                 <div class="container">
                     <div class="carousel-caption">
                         <h1>Felnőtt- és párterápia</h1>
