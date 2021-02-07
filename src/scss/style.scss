@@ -77,22 +77,12 @@ body {
   margin-bottom: 2rem;
 }
 
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  bottom: 3rem;
-  z-index: 10;
-}
-
-/* Declare heights because of positioning of img element */
-.carousel-item {
-  height: 32rem;
+#root .carousel-caption h1 {
+  margin-bottom: 1rem;
 }
 
 .carousel-item > img {
-  position: absolute;
-  top: -23rem;
-  left: 0;
-  height: 55rem;
+  width: 100%;
 }
 
 
@@ -177,7 +167,6 @@ body {
   #root .navbar {
     padding: .5rem .8rem;
   }
-
 }
 
 /* MIN WIDTH */
@@ -186,42 +175,4 @@ body {
   #colleagues img {
     margin-top: 0.5rem;
   }
-  .carousel-item > img {
-    position: absolute;
-    top: -32rem;
-    left: -36rem;
-    height: 70rem;
-  }
-  .carousel-caption p {
-    margin-bottom: 1.25rem;
-    font-size: 1.25rem;
-    line-height: 1.4;
-  }
-}
-
-@media (min-width: 992px) {
-  .carousel-item > img {
-    position: absolute;
-    top: -32rem;
-    left: -28rem;
-    height: 70rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .carousel-item > img {
-    position: absolute;
-    top: -47rem;
-    left: -28rem;
-    height: 95rem;
-  }
-}
-
-@media (min-width: 1920px) {
-  .carousel-item > img {
-    position: absolute;
-    top: -59rem;
-    left: -24rem;
-    height: 120rem;
-}
 }
