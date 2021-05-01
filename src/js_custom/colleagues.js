@@ -5,6 +5,13 @@ const ARANY_ILDIKO = {
     email: 'marathon2000@gmail.com'
 };
 
+const BEDO_LIZA = {
+    name: 'Bedő Ilona Liza',
+    title: 'klinikai szakpszichológus',
+    phoneNr: '+36 30 274 2252',
+    email: 'bedo.liz@gmail.com'
+};
+
 const BOGAR_JUDIT = {
     name: 'Bogár Judit',
     title: 'klinikai gyermek- és ifjúsági szakpszichológus',
@@ -31,6 +38,11 @@ window.onload = function () {
     $('#arany-ildiko .title').append(ARANY_ILDIKO.title);
     $('#arany-ildiko .phone-nr').append(ARANY_ILDIKO.phoneNr);
     $('#arany-ildiko .email').append(ARANY_ILDIKO.email);
+
+    $('#bedo-liza .name').append(BEDO_LIZA.name);
+    $('#bedo-liza .title').append(BEDO_LIZA.title);
+    $('#bedo-liza .phone-nr').append(BEDO_LIZA.phoneNr);
+    $('#bedo-liza .email').append(BEDO_LIZA.email);
 
     $('#bogar-judit .name').append(BOGAR_JUDIT.name);
     $('#bogar-judit .title').append(BOGAR_JUDIT.title);
