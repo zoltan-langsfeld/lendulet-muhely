@@ -16,7 +16,7 @@ minify and/or compile the custom scss/js files, run:
 ```
 gulp --prod
 ```
-The following script executes the ```gulp --prod``` command and it also uploads the content of the target directory to AWS S3. You have to set up your AWS CLI credentials before running this script. After running this script, the website will be instantly available on the internet.
+The following script executes the ```gulp --prod``` command and it also uploads the content of the target directory to AWS S3. You have to set up your AWS CLI credentials before running this script. After running this script, the website will be instantly available on the internet. 
 ```
 ./deploy.sh
 ```
