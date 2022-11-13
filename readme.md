@@ -7,16 +7,16 @@ To install all the required dependencies, run:
 ```
 npm install
 ```
-To move all the minified dependencies to the **working directory**, and to minify and/or compile the custom scss/js files, run:
+To move all the minified dependencies into the **working directory**, and to minify and/or compile the custom scss/js files, run:
 ```
 gulp
 ```
-To move all the minified dependencies to the **target directory**, and
+To move all the minified dependencies into the **target directory**, and
 minify and/or compile the custom scss/js files, run:
 ```
 gulp --prod
 ```
-The following script executes the ```gulp --prod``` command and it also uploads the content of the target directory to AWS S3. You have to set up your AWS CLI credentials before running this script. After running this script, the website will be instantly available on the internet. 
+The following script executes the ```gulp --prod``` command and it also uploads the content of the target directory into AWS S3. You have to set up your AWS CLI credentials before running this script. After running this script, the website will be instantly available on the internet. 
 ```
 ./deploy.sh
 ```
