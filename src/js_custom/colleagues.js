@@ -33,6 +33,13 @@ const PAPP_TIMEA = {
     email: 'ptmilus@gmail.com'
 };
 
+const LANGO_REBEKA = {
+    name: 'Langó Rebeka',
+    title: 'Pszichológus, képzésben lévő pár- és családterapeuta, DSZIT terapeuta-jelölt',
+    phoneNr: '+36 20 667 9656',
+    email: 'langorebeka@gmail.com'
+};
+
 window.onload = function () {
     $('#arany-ildiko .name').append(ARANY_ILDIKO.name);
     $('#arany-ildiko .title').append(ARANY_ILDIKO.title);
@@ -58,4 +65,9 @@ window.onload = function () {
     $('#papp-timea .title').append(PAPP_TIMEA.title);
     $('#papp-timea .phone-nr').append(PAPP_TIMEA.phoneNr);
     $('#papp-timea .email').append(PAPP_TIMEA.email);
+
+    $('#lango-rebeka .name').append(LANGO_REBEKA.name);
+    $('#lango-rebeka .title').append(LANGO_REBEKA.title);
+    $('#lango-rebeka .phone-nr').append(LANGO_REBEKA.phoneNr);
+    $('#lango-rebeka .email').append(LANGO_REBEKA.email);
 };
