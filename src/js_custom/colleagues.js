@@ -21,7 +21,7 @@ const BOGAR_JUDIT = {
 
 const FILEP_HAJNALKA = {
     name: 'Filep Hajnalka',
-    title: 'pszichoterapeuta jelölt, klinikai szakpszichológus, családterapeuta',
+    title: 'pszichoterapeuta, klinikai szakpszichológus, családterapeuta',
     phoneNr: '+36 20 410 1008',
     email: 'neteger@gmail.com'
 };
