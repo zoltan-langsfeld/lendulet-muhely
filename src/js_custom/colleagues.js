@@ -34,8 +34,8 @@ const PAPP_TIMEA = {
 };
 
 const LANGO_REBEKA = {
-    name: 'Langó Rebeka',
-    title: 'Pszichológus, képzésben lévő pár- és családterapeuta, DSZIT terapeuta-jelölt',
+    name: 'Mázló-Langó Rebeka',
+    title: 'Pszichológus, DSZIT terapeuta, képzésben lévő pár- és családterapeuta',
     phoneNr: '+36 20 667 9656',
     email: 'langorebeka@gmail.com'
 };
